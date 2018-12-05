@@ -135,7 +135,7 @@ class Main extends PluginBase implements Listener
 				}
 			}
 		}
-	}*/
+	}
 
 	/**
      * @priority MONITOR
