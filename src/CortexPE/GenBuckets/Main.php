@@ -104,12 +104,12 @@ class Main extends PluginBase implements Listener
 							$bucket->setCustomName($arr["bucketName"]);
 
 							$sender->getInventory()->addItem($bucket);
-							$sender->sendMessage(TextFormat::GREEN . "Purchased " . $arr["bucketName"] . TextFormat::RESET);
+							$sender->sendMessage(TextFormat::GREEN . "§dPurchased §5" . $arr["bucketName"] . TextFormat::RESET);
 						} else {
-							$sender->sendMessage(TextFormat::RED . "Not enough money." . TextFormat::RESET);
+							$sender->sendMessage(TextFormat::RED . "§cNot enough money." . TextFormat::RESET);
 						}
 					} else {
-						$sender->sendMessage(TextFormat::RED . "Bucket does not exist. Use /gbuy to get a list of available GenBuckets." . TextFormat::RESET);
+						$sender->sendMessage(TextFormat::RED . "§cBucket does not exist. §aUse §b/gbuy §6to get a list of available GenBuckets." . TextFormat::RESET);
 					}
 				}
 			} else {
@@ -124,7 +124,7 @@ class Main extends PluginBase implements Listener
 		return true;
 	}
 
-	/*public function onHeld(PlayerItemHeldEvent $event){
+	public function onHeld(PlayerItemHeldEvent $event){
 		$player = $event->getPlayer();
 		$i = $player->getInventory()->getItemInHand();
 
